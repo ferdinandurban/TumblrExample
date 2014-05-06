@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AFNetworking.h"
 
 @interface ViewController ()
 
@@ -14,16 +15,23 @@
 
 @implementation ViewController
 
+@synthesize postDetail;
+@synthesize postTitle;
+@synthesize postImage;
+@synthesize tumblrDetail;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.postTitle.text = [self.tumblrDetail objectForKey:@"title"];
+    self.postDetail.text = [self.tumblrDetail objectForKey:@"detail"];
+    [self.postImage setImageWithURL:[NSURL URLWithString:[self.tumblrDetail objectForKey:@"imgURL"]]];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

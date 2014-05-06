@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MyCell.h
 //  tumblr_example
 //
 //  Created by Dr.Evil on 06/05/14.
@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MyCell : UITableViewCell
 
-@property (strong, nonatomic) NSMutableDictionary *tumblrDetail;
-
-@property (weak, nonatomic) IBOutlet UIImageView *postImage;
 @property (weak, nonatomic) IBOutlet UILabel *postTitle;
 @property (weak, nonatomic) IBOutlet UILabel *postDetail;
+@property (weak, nonatomic) IBOutlet UIImageView *postImage;
 
 @end
